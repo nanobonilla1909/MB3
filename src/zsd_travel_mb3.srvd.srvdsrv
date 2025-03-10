@@ -1,0 +1,9 @@
+@EndUserText.label: 'Travel'
+define service ZSD_TRAVEL_MB3 {
+  expose Z_C_TRAVEL_MB3        as Travel;
+  expose Z_C_BOOKING_MB3       as Booking;
+  expose Z_C_BOOKSUPPL_MB3     as BookingSupplement;
+  expose /DMO/I_Supplement     as Supplement;
+  expose /DMO/I_SupplementText as SupplementText;
+  expose I_Currency            as Currency;
+}

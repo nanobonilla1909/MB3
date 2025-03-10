@@ -1,0 +1,42 @@
+@Metadata.layer: #CORE
+@Search.searchable: true
+
+@UI: { 
+
+headerInfo: {
+    typeName: 'Booking',
+    typeNamePlural: 'Bookings',
+    title: {
+        type: #STANDARD,
+        value: 'BookingId'
+    }  
+ }
+}
+
+annotate view Z_C_BOOKING_MB3
+    with 
+{
+
+@UI.facet: [
+   {
+    id: 'Booking',
+    purpose: #STANDARD,
+    position: 10,
+    label: 'Booking',
+    type: #IDENTIFICATION_REFERENCE
+   },
+   { 
+    id: 'BookingSupplement',
+    purpose: #STANDARD,
+    position: 20,
+    label: 'Booking Supplement',
+    type: #LINEITEM_REFERENCE,
+    targetElement: '_BookingSupplement'
+    
+   }
+]    
+
+@Search.defaultSearchElement: true
+TravelId;
+    
+}
